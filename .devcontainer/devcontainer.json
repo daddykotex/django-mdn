@@ -1,0 +1,21 @@
+{
+	"name": "Python Sample",
+	"dockerFile": "Dockerfile",
+	"appPort": 9000,
+	"context": "..",
+	"extensions": [
+		"ms-python.python",
+		"editorconfig.editorconfig"
+	],
+	"settings": {
+		"python.pythonPath": "/usr/local/bin/python",
+		"python.linting.pylintEnabled": true,
+		"python.linting.pylintPath": "/usr/local/bin/pylint",
+		"python.linting.enabled": true
+	},
+	"postCreateCommand": "sudo pipenv install --system",
+	"runArgs": [
+		"-u",
+		"davidfrancoeur"
+	]
+}
